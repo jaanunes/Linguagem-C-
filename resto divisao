@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int num, soma;
+
+    scanf("%d", &num);
+
+    soma = ((3*num) + 1) + ((2*num) - 1);
+    printf("%d", soma);
+
+    return 0;
+}
