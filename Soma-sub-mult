@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int n1, n2, soma, sub, mult;
+
+    printf("Digite dois valores: \n");
+    scanf("%d %d", &n1, &n2);
+
+    soma = n1 + n2;
+    printf("soma dos valores: %d \n", soma);
+
+    sub = n1 - n2;
+    printf("subtracao dos valores: %d \n", sub);
+
+    mult = n1 * n2;
+    printf("multiplicacao dos valores: %d \n", mult);
+
+
+    return 0;
+}
