@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+    int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+        int n = 20, soma = 0;
+
+        while(n <= 40){
+            soma = soma + n;
+            n++;
+        }
+        printf("\nUsando while a soma dos valores é: %d", soma);
+
+        soma = 0;
+        for(n = 20; n<=40; n++){
+            soma = soma + n;
+        }
+        printf("\nUsando for a soma dos valores é: %d", soma);
+
+
+        return 0;
+    }
