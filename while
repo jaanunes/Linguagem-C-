@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+    int main(){
+        setlocale(LC_ALL, "Portuguese");
+        int valor, quadrado;
+
+        while(valor != 0){
+            printf("\nDigite um valor (0 pra sair): ");
+            scanf("%d", &valor);
+            quadrado = valor * valor;
+            printf("\nO quadrado do numero é: %d", quadrado);
+        }
+
+        return 0;
+    }
