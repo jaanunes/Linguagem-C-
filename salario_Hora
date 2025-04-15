@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(){
+    int cod, horaTrabalhada;
+    float valorHora, salario;
+
+    printf("Digite o codigo do funcionario: ");
+    scanf("%d", &cod);
+
+    printf("Digite quantas horas trabalhadas: ");
+    scanf("%d", &horaTrabalhada);
+
+    printf("Qual o valor recebido por hora? \n");
+    scanf("%f", &valorHora);
+
+    salario = horaTrabalhada * valorHora;
+
+    printf("NUMERO = %d \n", cod);
+    printf("SALARIO = U$ %.2f", salario);
+
+
+
+    return 0;
+}
