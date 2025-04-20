@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+    float x1, x2, y1, y2, raiz, soma;
+
+    printf("Digite as coordenadas do ponto 1 no plano(x1 y1): ");
+    scanf("%f%f", &x1, &y1);
+
+    printf("\nDigite as coordenadas do ponto 2 no plano (x2 y2): ");
+    scanf("%f%f", &x2, &y2);
+
+    soma = (((x2 - x1)*(x2 - x1)) + ((y2 - y1)*(y2 - y1)));
+    raiz = sqrt(soma);
+
+    printf("A distancia entre os pontos e: %.4f", raiz);
+
+
+  return 0;
+}
