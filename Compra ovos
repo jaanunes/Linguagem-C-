@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+    float qntOvos, totalMais, totalMenos;
+
+    printf("Qual a quantidade de ovos foi comprado? ");
+    scanf("%f", &qntOvos);
+
+    if(qntOvos >= 12)
+    {
+        totalMais = qntOvos * 0.30;
+        printf("O total da compra e: %.2f", totalMais);
+    }else
+    {
+        totalMenos = qntOvos * 0.35;
+        printf("O total da compra e: %.2f", totalMenos);
+    }
+
+  return 0;
+}
