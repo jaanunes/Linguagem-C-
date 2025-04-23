@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (void)
+{
+    setlocale(LC_ALL, "Portuguese");
+
+    int ladoA, ladoB, ladoC;
+
+    printf("Digite as três medidas do triangulo: ");
+    scanf("%d %d %d", &ladoA, &ladoB, &ladoC);
+
+    if(ladoA == ladoB && ladoA == ladoC && ladoB == ladoC){
+        printf("O triangulo é Equilatero");
+    }
+    else if(ladoA == ladoB || ladoA == ladoC || ladoB == ladoC){
+        printf("O triangulo é Isóscele");
+    }else{
+        printf("O triangulo é Escaleno");
+    }
+
+  return 0;
+}
