@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main ()
+{
+    int n, mult = 1, soma = 0, positivo = 0, negativo = 0;
+    int numeros[50], i = 0;
+
+    do{
+        printf("Digite um numero (0 para parar): ");
+        scanf("%d", &n);
+
+        if(n != 0){
+            numeros[i] = n;
+            i++;
+        }
+        if(n > 0){
+           positivo++;
+           mult *= n;
+        }
+        else{
+            negativo++;
+            soma += n;
+        }
+
+    }while(n != 0);
+
+    printf("\nQnt numeros negativos: %d", negativo);
+    printf("\nQnt numeros positivos: %d", positivo);
+    printf("\nMultiplicacao dos positivos: %d", mult);
+    printf("\nSoma dos negativos: %d", soma);
+
+  return 0;
+}
