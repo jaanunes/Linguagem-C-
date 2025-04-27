@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int main ()
+{
+    int jogador, computador;
+    int vitoriasJogador = 0, vitoriasComputador = 0;
+
+    srand(time(NULL));
+
+    while(vitoriasJogador < 3 && vitoriasComputador < 3){
+
+        printf("Escolha uma opcao: \n1- Pedra \n2- Papel \n3- Tesoura \n");
+        scanf("%d", &jogador);
+
+        computador = (rand() % 3) + 1;
+
+            if(jogador == computador){
+                printf("\nEmpate!");
+            }
+            else if(jogador == 1 && computador == 3 || jogador == 3 && computador == 2 || jogador == 2 && computador == 1){
+                printf("\nO Jogador venceu a rodada!");
+                vitoriasJogador++;
+            }
+            else{
+                printf("\nO computador venceu a rodada!");
+                vitoriasComputador++;
+            }
+
+        printf("\nO jogador escolheu: ");
+            if(jogador == 1) printf("Pedra\n");
+            else if(jogador == 2) printf("Papel\n");
+            else if(jogador == 3) printf("Tesoura\n");
+
+        printf("O computador escolheu: ");
+            if(computador == 1) printf("Pedra\n");
+            else if(computador == 2) printf("Papel\n");
+            else if(computador == 3) printf("Tesoura\n");
+
+        printf("\nPlacar Atual: Jogador %d x %d Computador\n\n", vitoriasJogador, vitoriasComputador);
+
+    }
+
+    if(vitoriasJogador == 3){
+        printf("Parabens!! O jogador venceu o jogo!\n");
+    }
+    else{
+        printf("O computador venceu o jogo!\n");
+    }
+
+
+  return 0;
+}
