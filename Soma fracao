@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main ()
+{
+    int valor, i;
+    float soma;
+
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &valor);
+
+    if(valor <= 0){
+        printf("Digite um valor acima de zero");
+    }
+
+    for(i = 1; i <= valor; i++){
+        soma+= 1.0 / i;
+    }
+
+    printf("A soma final: %.4f", soma);
+
+
+  return 0;
+}
