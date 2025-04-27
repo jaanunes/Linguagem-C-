@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main ()
+{
+    int codigo[10], opcao, i, cadastro = 0;
+    float preco[10];
+
+    for(i =1; i < 10; i++){
+        printf("Gostaria de adicionar um novo produto? (1-Sim ou 0-Nao): ");
+        scanf("%d", &opcao);
+        if(opcao == 1){
+            printf("\nDigite o codigo: ");
+            scanf("%d", &codigo[i]);
+            printf("\nDigite o preco do produto: ");
+            scanf("%f", &preco[i]);
+            cadastro++;
+        }
+        else{
+             break;
+        }
+    }
+    printf("\nForam cadastrados %d", cadastro, " produtos");
+    for(i=1; i<= cadastro; i++){
+        printf("\nCodigo: %d", codigo[i]);
+        printf("\nPreco: R$%.2f", preco[i]);
+    }
+
+  return 0;
+}
