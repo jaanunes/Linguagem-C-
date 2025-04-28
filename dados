@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int main ()
+{
+    int dado1, dado2, soma, l, c;
+    int dados[6][6] = {0};
+    int somas[13] = {0};
+
+    srand(time(NULL));
+
+    for(int i = 0; i < 1000; i++){
+    dado1 = (rand() %6) + 1;
+    dado2 = (rand() %6) + 1;
+
+    soma = dado1 + dado2;
+    dados[dado1 -1][dado2 - 1]++;
+    somas[soma]++;
+    }
+    for(l = 0; l < 6; l++){
+        for(c = 1; c < 6; c++){
+            printf("Dado1: %d, Dado2: %d = %d vezes\n", l+1, c+1, dados[l][c]);
+        }
+    }
+    for(int i = 2; i <=12; i++){
+        printf("Soma %d apareceu %d vezes\n", i, somas[i]);
+    }
+
+  return 0;
+}
