@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main ()
+{
+    int i, j, k;
+    int A[3][3];
+    int B[3][2];
+    int C[3][2] = {0};
+
+    printf("Digite os valores para a matriz 3x3:\n");
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 3; j++){
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &A[i][j]);
+        }
+    }
+    printf("Digite os valores para a matriz 3x2:\n");
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 2; j++){
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &B[i][j]);
+        }
+    }
+    
+    printf("\n Matriz A (3x3): \n");
+    for(i = 0; i < 3; i++){ //imprimir matriz 1
+        printf("[ ");
+        for(j = 0; j < 3; j++){
+            printf("%d ", A[i][j]);
+        }
+        printf("]\n");
+    }
+    
+    printf("\nMatriz B (3x2):\n");
+    for(i = 0; i < 3; i++){ //imprimir matriz 2
+        printf("[ ");
+        for(j = 0; j < 2; j++){
+            printf("%d ", B[i][j]);
+        }
+        printf("]\n");
+    }
+    
+    printf("\n");
+    
+    for(i = 0; i < 3; i++){ //linha matriz A
+        for(j = 0; j < 2; j++){ //coluna matriz B
+            for(k = 0; k < 3; k++){ //coluna matriz A / linha matriz B
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+    
+    printf("\nMatriz resultante C (3x2):\n");
+    for(i = 0; i < 3; i++){ //imprimir matriz 2
+        printf("[ ");
+        for(j = 0; j < 2; j++){
+            printf("%d ", C[i][j]);
+        }
+        printf("]\n");
+    }
+
+  return 0;
+}
